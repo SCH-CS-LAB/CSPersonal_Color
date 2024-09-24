@@ -1,0 +1,54 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.cspersonal_phone'
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        applicationId "com.example.cspersonal_phone"
+        buildConfigField "String", "AUTHORITY", '"com.example.cspersonal_phone"'   // BuildConfig 경로 사용을 위한 설정
+    }
+
+    /*buildFeatures {
+        buildConfig = true
+    }*/
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.5.0'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+
+    implementation 'com.android.volley:volley:1.2.1'
+    /* http 사용을 쉽게하는 volley 라이브러리 */
+
+    implementation "androidx.work:work-runtime:2.9.1"
+    /* workManager사용을 위한 라이브러리
+       workManager 사용하려면 compileSdk 33 이상이여함 */
+
+    implementation 'com.google.code.gson:gson:2.8.6'
+    /* java 객체 파일을 json으로 변환 시켜주는 라이브러리 gson */
+}

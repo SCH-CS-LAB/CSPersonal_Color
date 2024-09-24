@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--  앱에서 파일을 공유하기 위한 즉 권한설정 인 FileProvider 설정 xml  -->
+
+    <cache-path
+        name="cache"
+        path="." />    <!--Context.getCacheDir() 내부 저장소-->
+    <!-- 내부 저장소의 파일 경로 -->
+    <files-path
+        name="Capture"
+        path="." />
+    <!-- 외부 저장소의 파일 경로 -->
+    <external-path
+        name="external"
+        path="." />
+
+    <!-- 외부 저장소의 캐시 경로 -->
+    <external-cache-path
+        name="external-cache"
+        path="." />
+
+    <!-- 외부 저장소의 특정 디렉토리 (예: Pictures) 경로 -->
+    <external-files-path
+        name="external_files"
+        path="." />
+</paths>

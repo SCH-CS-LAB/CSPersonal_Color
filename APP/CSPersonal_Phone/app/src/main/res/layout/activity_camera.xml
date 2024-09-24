@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_camera"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!-- android:orientation="vertical"은 세로로 작성
+         android;gravity="center"은 가운데 정렬 -->
+
+    <!-- 사진 촬영 버튼  -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="666dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="580dp"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:onClick="onButtonClicked"
+        android:text="사진 촬영"
+        tools:layout_editor_absoluteX="120dp"
+        tools:layout_editor_absoluteY="808dp" />
+
+</LinearLayout>
